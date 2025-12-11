@@ -1,2 +1,26 @@
-# Devops-journey-Sachin
-This repository documents my personal DevOps learning journey. It includes daily notes, commands, diagrams, and summaries from my 4-month roadmap covering Linux, Git, Docker, Kubernetes, Terraform, AWS, Jenkins, Helm, Prometheus, Grafana, and GitOps tools like ArgoCD.
+# DevOps Journey - Sachin Shekhar Bashetti
+
+This repo documents my 4-month DevOps journey, including daily/weekly learning, notes, commands, and summaries.
+
+## 📅 Learning Roadmap
+
+- Linux
+- Git & GitHub
+- Docker & Containerization
+- Kubernetes
+- Terraform
+- AWS
+- Jenkins CI/CD
+- Monitoring (Prometheus + Grafana)
+- Helm
+- GitOps (ArgoCD)
+- Service Mesh
+- KEDA
+
+## 📘 Structure
+- Each folder contains notes, diagrams, important commands, and mini-tutorials.
+- The `daily-progress` folder tracks what I learned each day.
+- The `weekly-summary` folder consolidates achievements.
+
+## 🎯 Goal
+To show consistent learning and hands-on practice as I transition into DevOps.
