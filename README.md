@@ -1,6 +1,6 @@
 # DevOps Journey - Sachin Shekhar Bashetti
 
-This repo documents my 4-month DevOps journey, including daily/weekly learning, notes, commands, and summaries.
+This repo documents my DevOps journey, including daily/weekly learning, notes, commands, and summaries.
 
 ## 📅 Learning Roadmap
 
