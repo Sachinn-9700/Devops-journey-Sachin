@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # DevOps Journey - Sachin Shekhar Bashetti
 
 This repo documents my DevOps journey, including daily/weekly learning, notes, commands, and summaries.
