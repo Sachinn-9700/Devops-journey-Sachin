@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # DevOps Journey - Sachin Shekhar Bashetti
 
 This repo documents my DevOps journey, including daily/weekly learning, notes, commands, and summaries.
@@ -24,3 +25,6 @@ This repo documents my DevOps journey, including daily/weekly learning, notes, c
 
 ## 🎯 Goal
 To show consistent learning and hands-on practice as I transition into DevOps.
+=======
+# DevOps Journey – Sachin Shekhar Bashetti
+>>>>>>> d830887 (Initial commit: DevOps Journey repository)
