@@ -1,0 +1,6 @@
+# Ignore node modules and npm debug logs
+node_modules
+npm-debug.log
+Dockerfile
+.git
+.gitignore
