@@ -1,7 +1,12 @@
 # Terraform
 **/.terraform/*
-**/.terraform.lock.hcl
 *.tfstate
 *.tfstate.*
+.terraform.lock.hcl
 crash.log
 *.tfvars
+
+# Editors
+.vscode/
+.idea/
+
