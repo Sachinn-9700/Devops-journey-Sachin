@@ -1,0 +1,79 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: mongodb-sc
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+reclaimPolicy: Retain
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mongo-00
+spec:
+  storageClassName: mongodb-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data/pv-mongo-00
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mongo-01
+spec:
+  storageClassName: mongodb-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data/pv-mongo-01
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mongo-02
+spec:
+  storageClassName: mongodb-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data/pv-mongo-02
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mongo-03
+spec:
+  storageClassName: mongodb-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data/pv-mongo-03
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-mongo-04
+spec:
+  storageClassName: mongodb-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /mnt/data/pv-mongo-04
+---
+

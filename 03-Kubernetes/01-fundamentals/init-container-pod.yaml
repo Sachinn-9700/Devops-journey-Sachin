@@ -1,0 +1,33 @@
+# apiVersion defines the Kubernetes API version
+apiVersion: v1
+
+# kind specifies the type of Kubernetes object
+kind: Pod
+
+# metadata contains identifying information
+metadata:
+  name: init-container-pod
+  labels:
+    app: init-demo
+
+# spec defines the desired behavior of the Podspec:
+  spec:
+  # initContainers run BEFORE app containers start
+  # They are commonly used for setup tasks
+  initContainers:
+    - name: init-setup
+
+      # BusyBox image used for simple shell commands
+      image: busybox
+
+      # Command to simulate a setup task
+      command:
+        - sleep
+        - "10"
+containers:
+    - name: app-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+        

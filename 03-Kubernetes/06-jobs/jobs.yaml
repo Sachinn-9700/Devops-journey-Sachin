@@ -1,0 +1,16 @@
+#my 1st jobs
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: myjob
+spec:
+  ttlSecondsAfterFinished: 10
+  parallelism: 1
+  completions: 1
+  template:
+    spec:
+      containers:
+      - name: c1
+        image: busybox
+        command: ['sh', '-c', 'echo slepping; sleep 10;']
+      restartPolicy: OnFailure

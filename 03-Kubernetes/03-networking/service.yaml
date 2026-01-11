@@ -1,0 +1,25 @@
+# apiVersion defines the Kubernetes API version
+apiVersion: v1
+
+# kind specifies the type of Kubernetes object
+kind: Service
+
+# metadata contains identifying information
+metadata:
+  name: app-service
+
+# spec defines how the Service exposes the application
+spec:
+  # type defines how the service is exposed
+  # ClusterIP is the default and exposes service inside the cluster
+  type: ClusterIP
+
+  # selector matches Pods with these labels
+  selector:
+    app: httpd
+
+  # ports define how traffic is forwarded
+  ports:
+    - protocol: TCP
+      port: 80        # Service port
+      targetPort: 80  # Container port

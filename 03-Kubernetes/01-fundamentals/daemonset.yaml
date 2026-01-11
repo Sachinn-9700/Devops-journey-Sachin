@@ -1,0 +1,39 @@
+# apps/v1 is used for workload resources like DaemonSet
+apiVersion: apps/v1
+
+# Here, we are creating a DaemonSet
+kind: DaemonSet
+
+# metadata contains identifying information about the DaemonSet
+metadata:
+  # Name of the DaemonSet
+  name: demo-ds1
+
+# spec defines the desired behavior of the DaemonSet
+spec:
+  # selector tells the DaemonSet which Pods it manages
+  selector:
+    matchLabels:
+      # Pods with this label will be managed by this DaemonSet
+      app: demo
+
+  # template defines the Pod that will run on each node
+  template:
+    metadata:
+      # Labels applied to Pods created by the DaemonSet
+      labels:
+        app: demo
+
+    # Pod specification
+    spec:
+      # List of containers that will run on each node
+      containers:
+        - name: demo-container
+
+          # Docker image used for the container
+          image: nginx:latest
+
+          # Ports exposed by the container
+          ports:
+            - containerPort: 80
+              protocol: TCP

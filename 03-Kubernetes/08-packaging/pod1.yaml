@@ -1,0 +1,24 @@
+# v1 is used for core resources like Pod, Service, ConfigMap, Secret
+apiVersion: v1
+
+# kind specifies the type of Kubernetes object
+# Here we are creating a Pod
+kind: Pod
+
+# metadata contains information that uniquely identifies the object
+metadata:
+  # Name of the Pod
+  name: httpd-pod
+  
+# spec defines the desired state and behavior of the Pod
+spec:
+  # containers is a list because a Pod can run one or more containers
+  containers:
+    - name: httpd-container
+
+      # Docker image to be used for this container
+      image: httpd:latest
+
+      # ports exposes the container port
+      ports:
+        - containerPort: 80

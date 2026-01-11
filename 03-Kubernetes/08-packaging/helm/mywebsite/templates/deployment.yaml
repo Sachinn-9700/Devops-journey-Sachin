@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mywebsite
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mywebsite
+  template:
+    metadata:
+      labels:
+        app: mywebsite
+    spec:
+      containers:
+      - name: mywebsite
+        image: sachinn9700/mywebsite:v3
+        ports:
+          - name: httpd
+            containerPort: 80
+            protocol: TCP
+---

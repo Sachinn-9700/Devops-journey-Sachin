@@ -1,0 +1,14 @@
+
+services:
+  website:
+    build: ./website
+    ports:
+      - "80:80"
+  flask-service:
+    build: ./flask-service
+    ports:
+      - "5000:5000"
+  node-service:
+    build: ./node-service
+    ports:
+      - "4001:4001" 

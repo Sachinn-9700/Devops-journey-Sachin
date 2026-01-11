@@ -1,0 +1,29 @@
+# apiVersion defines the Kubernetes API version
+apiVersion: v1
+
+# kind specifies the type of Kubernetes object
+kind: Service
+
+# metadata contains identifying information
+metadata:
+  name: app-nodeport-service
+  labels:
+    app: httpd
+
+# spec defines how the Service exposes the application
+spec:
+  # type NodePort exposes the service on each Node's IP at a static port
+  type: NodePort
+
+  # selector matches Pods with these labels
+  selector:
+    app: httpd
+
+  # ports define how traffic is forwarded to Pods
+  ports:
+    - protocol: TCP
+      # Port exposed inside the cluster
+      port: 80
+      # Port on the Pod (containerPort)
+      targetPort: 80
+      # NodePort exposes the service on this port on every node

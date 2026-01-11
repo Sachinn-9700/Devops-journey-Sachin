@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ .Values.app.name }}</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; background: #eef2f7; }
+    h1 { color: #198754; }
+    .info { margin-top: 1rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; background: #fff; }
+    .info span { display: block; margin: .25rem 0; }
+    .badge { display: inline-block; padding: .3rem .6rem; background: #0d6efd; color: white; border-radius: 6px; font-size: .85rem; margin-top: .5rem; }
+    footer { margin-top: 2rem; font-size: .9rem; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>{{ .Values.app.name }}</h1>
+  <p>{{ .Values.app.description }}</p>
+
+  <div class="info">
+    <span><strong>Namespace:</strong> {{ .Release.Namespace }}</span>
+    <span><strong>Release:</strong> {{ .Release.Name }}</span>
+    <span><strong>Revision:</strong> {{ .Release.Revision }}</span>
+    <span><strong>App Version:</strong> {{ .Chart.AppVersion }}</span>
+    <span><strong>Chart Version:</strong> {{ .Chart.Version }}</span>
+    <span class="badge">Updated: {{ now | date "2006-01-02 15:04:05" }}</span>
+  </div>
+
+  <footer>
+    This page is managed by Helm. Update values in <code>values.yaml</code> and run <code>helm upgrade</code>.
+    Roll back with <code>helm rollback</code>.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# apiVersion defines the Kubernetes API version
+apiVersion: v1
+
+# kind specifies the Kubernetes object type
+kind: Pod
+
+# metadata contains identifying information
+metadata:
+  name: sidecar-pod
+  labels:
+    app: sidecar-demo
+
+# spec defines the desired behavior of the Pod
+spec:
+  # containers run together inside the same Pod
+  containers:
+    # Main application container
+    - name: app-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+    # Sidecar container
+    - name: sidecar-container
+      image: busybox
+
+      # Sidecar continuously runs alongside the main container
+      command:
+        - sleep
+        - "3600"

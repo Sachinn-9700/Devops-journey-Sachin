@@ -1,0 +1,40 @@
+#my 1st deployment file
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  namespace: my-ns
+  annotations:
+    deployment.kubernetes.io/revision: "6"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mywebapp
+  template:
+    metadata:
+      labels:
+        app: mywebapp
+    spec:
+      containers: 
+      - name: mywebapp-container
+        image: sachinn9700/mywebapp:7.0
+        ports:
+        - containerPort: 80
+
+---
+#my 1st service file
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+  namespace: my-ns
+spec:
+  type: NodePort
+  selector:
+    app: mywebapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+---
