@@ -80,4 +80,5 @@ Typical contents include:
 ---
 🧩 One-Line Summary
 
+
 A living repository documenting my transition into DevOps through hands-on learning and real-world tooling.
