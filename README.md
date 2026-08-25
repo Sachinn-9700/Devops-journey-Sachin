@@ -9,7 +9,6 @@ The goal is not just to collect notes, but to **understand systems end to end** 
 
 ## 📅 Learning Roadmap (Evolving)
 
-
 ### ✅ Foundations (Completed / Ongoing)
 
 * Linux fundamentals & troubleshooting
