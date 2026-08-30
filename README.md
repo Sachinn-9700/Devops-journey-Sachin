@@ -1,4 +1,4 @@
-# 🚀 DevOps Journey – Sachin Shekhar Bashetti.
+# 🚀 DevOps Journey – Sachin Shekhar Bashetti
 
 This repository documents my **hands-on DevOps learning journey**, combining structured study with practical implementation.
 It includes notes, commands, experiments, and summaries from real work on **CI/CD, containers, Kubernetes, and GitOps**.
