@@ -1,4 +1,4 @@
-# 🚀 DevOps Journey – Sachin Shekhar Bashetti
+# 🚀 DevOps Journey – Sachin Shekhar Bashetti.
 
 This repository documents my **hands-on DevOps learning journey**, combining structured study with practical implementation.
 It includes notes, commands, experiments, and summaries from real work on **CI/CD, containers, Kubernetes, and GitOps**.
@@ -25,6 +25,7 @@ The goal is not just to collect notes, but to **understand systems end to end** 
 * GitOps fundamentals with Argo CD
 
 ### 🔜 Platform & Scaling (Upcoming / In Progress)
+
 
 * Terraform (AWS-focused IaC)
 * AWS core services (EC2, IAM, EKS basics)
